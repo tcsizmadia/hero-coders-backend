@@ -1,0 +1,26 @@
+@port = 8080
+@host = localhost:{{port}}
+
+POST http://{{host}}/api/heroes
+Content-Type: application/json
+
+{
+    "id": 11,
+    "name": "CoderSpider",
+    "age": 29,
+    "health": 65
+}
+
+###
+
+GET http://{{host}}/api/heroes
+Content-Type: application/json
+
+###
+
+GET http://{{host}}/api/heroes/11/history
+Content-Type: application/json
+
+### 
+
+POST http://{{host}}/api/heroes/11/restore/1

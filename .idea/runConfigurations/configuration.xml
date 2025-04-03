@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="hero-coders-backend" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="io.github.tcsizmadia.herocoders.Main" />
+    <module name="hero-coders-backend" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

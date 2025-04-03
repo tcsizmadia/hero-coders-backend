@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+    <persistence-unit name="heroespu" transaction-type="JTA">
+        <description>Hero Coders JPA Persistence Unit</description>
+        <jta-data-source>heroesDataSource</jta-data-source>
+        <class>io.github.tcsizmadia.herocoders.entities.Hero</class>
+        <properties>
+            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
+            <property name="jakarta.persistence.sql-load-script-source" value="META-INF/import.sql"/>
+        </properties>
+    </persistence-unit>
+</persistence>

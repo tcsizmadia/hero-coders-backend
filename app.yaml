@@ -1,0 +1,37 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: hero-coders-backend
+  labels:
+    app: hero-coders-backend
+spec:
+  type: ClusterIP
+  selector:
+    app: hero-coders-backend
+  ports:
+    - name: tcp
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: hero-coders-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hero-coders-backend
+  template:
+    metadata:
+      labels:
+        app: hero-coders-backend
+        version: v1
+    spec:
+      containers:
+      - name: hero-coders-backend
+        image: hero-coders-backend
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
