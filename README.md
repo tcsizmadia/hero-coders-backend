@@ -61,13 +61,6 @@ The sample requests demonstrate:
 - Getting the audit history of a specific hero
 - Restoring a hero to a previous version
 
-The sample requests demonstrate:
-
-- Creating a new hero
-- Retrieving all heroes
-- Getting the audit history of a specific hero
-- Restoring a hero to a previous version
-
 ### Docker Image
 
 To build a Docker image for the application, run the following command:
